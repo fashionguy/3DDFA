@@ -51,7 +51,7 @@ def parse_args():
     parser.add_argument('--log-mode', default='w', type=str)
     parser.add_argument('--size-average', default='true', type=str2bool)
     parser.add_argument('--num-classes', default=62, type=int)
-    parser.add_argument('--arch', default='mobilenet_1', type=str, choices=arch_choices)
+    parser.add_argument('--arch', default='mynet', type=str, choices=arch_choices)
     parser.add_argument('--frozen', default='false', type=str2bool)
     parser.add_argument('--milestones', default='15,25,30', type=str)
     parser.add_argument('--task', default='all', type=str)

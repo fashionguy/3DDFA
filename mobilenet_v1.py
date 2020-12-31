@@ -210,7 +210,6 @@ class MyNet(nn.Module):
 
         x3 = self.fc3(x)
         out = torch.cat([x1, x2, x3], dim=1)
-        print(out.size())
         return out
 
 
