@@ -1,1 +1,1 @@
-../train.py
+/home/shishang/Desktop/Projects/3DDFA/train.py

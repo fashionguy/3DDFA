@@ -82,8 +82,8 @@ def benchmark_pipeline(arch, checkpoint_fp):
     def aflw():
         params = extract_param(
             checkpoint_fp=checkpoint_fp,
-            root='test.data/AFLW_GT_crop',
-            filelists='test.data/AFLW_GT_crop.list',
+            root='/home/shishang/Desktop/datasets/ALFW/test.data/AFLW_GT_crop',
+            filelists='/home/shishang/Desktop/datasets/ALFW/test.data/AFLW_GT_crop.list',
             arch=arch,
             device_ids=device_ids,
             batch_size=128)
@@ -93,8 +93,8 @@ def benchmark_pipeline(arch, checkpoint_fp):
     def aflw2000():
         params = extract_param(
             checkpoint_fp=checkpoint_fp,
-            root='test.data/AFLW2000-3D_crop',
-            filelists='test.data/AFLW2000-3D_crop.list',
+            root='/home/shishang/Desktop/datasets/ALFW/test.data/AFLW2000-3D_crop',
+            filelists='/home/shishang/Desktop/datasets/ALFW/test.data/AFLW2000-3D_crop.list',
             arch=arch,
             device_ids=device_ids,
             batch_size=128)

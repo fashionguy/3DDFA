@@ -32,7 +32,7 @@ STD_SIZE = 120
 
 def main(args):
     # 1. load pre-tained model
-    checkpoint_fp = 'models/phase1_wpdc_vdc.pth.tar'
+    checkpoint_fp = args.checkpoint
     arch = 'mobilenet_1'
 
     checkpoint = torch.load(checkpoint_fp, map_location=lambda storage, loc: storage)['state_dict']
@@ -200,6 +200,6 @@ if __name__ == '__main__':
     parser.add_argument('--dlib_bbox', default='true', type=str2bool, help='whether use dlib to predict bbox')
     parser.add_argument('--dlib_landmark', default='true', type=str2bool,
                         help='whether use dlib landmark to crop image')
-
+    parser.add_argument('--checkpoint', default='models/phase1_wpdc_vdc.pth.tar', type=str)
     args = parser.parse_args()
     main(args)
